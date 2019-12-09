@@ -62,17 +62,23 @@ ul.socialIcons {
     background: #666666;
     box-shadow: 0 0 16px #666666;
 }
-.btn-success{
+/* .btn-success{
     background-color: #aaa;
     border-color: #888;
-}
-.btn-success:hover{
+} */
+/* .btn-success:hover{
     background-color: #888;
     border-color: #888;
-}
+} */
 .fa-pencil:before{
     color: #000;
 }
 .btn-group-sm {
 margin-top: 48px !important;
+}
+.fa-star-0{
+    font-size:30px;
+    padding-bottom: 12px;
+    margin-right: 10px;
+    float: right;
 }
