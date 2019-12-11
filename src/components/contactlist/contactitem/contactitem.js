@@ -12,8 +12,9 @@ class ContactItem extends React.Component {
         twitter: this.props.twitter,
         gender: this.props.gender,
         btnRandom: false,
-        btnStar: false
-
+        btnStar: false,
+        btnHover:false,
+        btnLeave: false
     }
 
 
@@ -27,7 +28,19 @@ class ContactItem extends React.Component {
 
     onStarClick = () => {
         this.setState({
-            btnStar: !this.state.btnRandom.Star
+            btnStar: !this.state.btnStar
+        })
+    }
+
+    onNameHover = () => {
+        this.setState({
+            btnHover: !this.state.btnHover
+        })
+    }
+
+    onNameLeave  = () => {
+        this.setState({
+            btnLeave: !this.state.btnLeave
         })
     }
     render() {
@@ -36,12 +49,19 @@ class ContactItem extends React.Component {
         const URL = `https://randomuser.me/api/portraits/${this.state.gender}/${this.state.avatar}.jpg `
         let btnStyle = "btn btn-success";
         let StarStyle = "fa fa-star-o";
+        let HoverStyle = "info";
 
         if (this.state.btnRandom) {
             btnStyle = "btn btn-warning";
         }
         if (this.state.btnStar) {
             StarStyle = "fa fa-star";
+        }
+        if (this.state.btnHover) {
+            HoverStyle = "info-hover";
+        }
+        if (this.state.btnLeave) {
+            HoverStyle = "info";
         }
 
         return (
@@ -61,10 +81,11 @@ class ContactItem extends React.Component {
                                         <i className="fa fa-close"></i>
                                     </a>
                                 </div>
-                                <div className="info">
-                                    <h4>{name}</h4>
+                                <div >
+                                    <h4 className={HoverStyle} onMouseEnter={this.onNameHover} onMouseLeave={this.onNameLeave}>{name}</h4>
+                                    
                                     <p className="text-muted">{decription}</p>
-                                </div>
+                                    </div>
                             </div>
                             <div className="clearfix"></div>
                             <ul className="socialIcons">

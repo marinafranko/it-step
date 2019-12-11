@@ -76,9 +76,28 @@ ul.socialIcons {
 .btn-group-sm {
 margin-top: 48px !important;
 }
-.fa-star-0{
-    font-size:30px;
-    padding-bottom: 12px;
-    margin-right: 10px;
+.fa-star-o{
+    font-size:28px;
+    padding-bottom: 34px;
+    margin-left: 250px;
     float: right;
+    padding-right: 10px;
+    padding-top: 4px;
 }
+.fa-star{
+    font-size:28px;
+    padding-bottom: 34px;
+    margin-left: 250px;
+    float: right;
+    padding-right: 10px;
+    padding-top: 4px;
+    
+}
+.info-hover{
+    color: red;
+    border: 7px solid transparent;
+}
+ .info{
+    border: 7px solid transparent;
+    margin: 0;
+} 
