@@ -1,0 +1,15 @@
+ul li{
+    display: inline-block;
+    
+}
+.btn-group-sm{
+    margin-top:25px;
+}
+ul{
+    display: inline-block;
+    
+}
+button{
+    float: right;
+}
+
